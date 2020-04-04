@@ -799,10 +799,6 @@ int negative_node_search(Node* root) {
 		return root->info;
 	if (root->left != nullptr)
 		value = negative_node_search(root->left);
-	if (value < 0)
-		return value;
-	if (root->right != nullptr)
-		value = negative_node_search(root->right);
 	return value;
 }
 
