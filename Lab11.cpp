@@ -554,7 +554,7 @@ bool tree_from_file(int& N, Node*& root) {
 				return 0;
 			end = chrono::high_resolution_clock::now();
 			elapsed_seconds = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
-			cout << "Дерево создано за " << 0.0000000001 * elapsed_seconds << " секунды.\n";
+			cout << "Дерево создано за " << 0.000000001 * elapsed_seconds << " секунды.\n";
 			return 1;
 		}
 	}
@@ -831,7 +831,7 @@ void part5(Node*& root, int& N) {
 	}
 	end = chrono::high_resolution_clock::now();
 	elapsed_seconds = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
-	cout << "Удаление отрицательных элементов за " << 0.0000000001 * elapsed_seconds << " секунды.\n";
+	cout << "Удаление отрицательных элементов за " << 0.000000001 * elapsed_seconds << " секунды.\n";
 
 	start = chrono::high_resolution_clock::now();
 	value = odd_search(root);
@@ -843,7 +843,7 @@ void part5(Node*& root, int& N) {
 	}
 	end = chrono::high_resolution_clock::now();
 	elapsed_seconds = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
-	cout << "Изменение нечетных элементов за " << 0.0000000001 * elapsed_seconds << " секунды.\n";
+	cout << "Изменение нечетных элементов за " << 0.000000001 * elapsed_seconds << " секунды.\n";
 }
 
 int main()
@@ -894,7 +894,7 @@ int main()
 				tree_randomly(N_node, root, 2000);
 				end = chrono::high_resolution_clock::now();
 				elapsed_seconds = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
-				cout << "Дерево создано за " << 0.0000000001 * elapsed_seconds << " секунды.\n" << "Элементы в порядке возрастания:\n";
+				cout << "Дерево создано за " << 0.000000001 * elapsed_seconds << " секунды.\n" << "Элементы в порядке возрастания:\n";
 				tree_symmetrical_walk(root);
 				cout << endl;
 				break;
@@ -959,7 +959,7 @@ int main()
 				if (add_to_tree(root, value, N_node)) {
 					end = chrono::high_resolution_clock::now();
 					elapsed_seconds = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
-					cout << "Узел добавлен за " << 0.0000000001 * elapsed_seconds << " секунды.\n";
+					cout << "Узел добавлен за " << 0.000000001 * elapsed_seconds << " секунды.\n";
 				}
 				else
 					cout << "Узел с таким значением уже существует.\n";
@@ -973,7 +973,7 @@ int main()
 				if (remove_from_tree(root, value)) {
 					end = chrono::high_resolution_clock::now();
 					elapsed_seconds = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
-					cout << "Узел удален за " << 0.0000000001 * elapsed_seconds << " секунды.\n";
+					cout << "Узел удален за " << 0.000000001 * elapsed_seconds << " секунды.\n";
 					N_node--;
 				}
 				else
@@ -992,7 +992,7 @@ int main()
 					cout << "Узел с таким значением не найден.\n";
 				else
 					cout << "Узел найден.\n";
-				cout << "Поиск " << 0.0000000001 * elapsed_seconds << " секунды.\n";
+				cout << "Поиск " << 0.000000001 * elapsed_seconds << " секунды.\n";
 			}
 			choice = 0;
 		}
@@ -1032,7 +1032,7 @@ int main()
 			}
 			end = chrono::high_resolution_clock::now();
 			elapsed_seconds = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
-			cout << "Проверка на сбалансированность " << 0.0000000001 * elapsed_seconds << " секунды.\n";
+			cout << "Проверка на сбалансированность " << 0.000000001 * elapsed_seconds << " секунды.\n";
 		}
 		else if (choice == 6)
 			cout << "Сначала создайте бинарное дерево.\n";
